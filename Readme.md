@@ -14,5 +14,5 @@ Due to this being our first game, *John Henry - Steel Driver* will not be writte
 	
 * [Robert Moore](https://twitter.com/BloodyBHoney) on Programming
 * [James Matthew Wine](http://jameswine.tumblr.com/) on Art Asets
-* [Diego Martiz](https://twitter.com/sundomefuture) on Sound Design
+* [Diego?](https://twitter.com/sundomefuture) on Sound Design
 
