@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\placeholder</sprite>
     <sprite>sprites\ground_left</sprite>
@@ -21,19 +23,29 @@
     <sprite>sprites\testTube</sprite>
     <sprite>sprites\woodpile</sprite>
     <sprite>sprites\JhenyWalk</sprite>
-    <sprite>sprites\testWall</sprite>
     <sprite>sprites\John</sprite>
+    <sprite>sprites\stanBlock</sprite>
+    <sprite>sprites\copWalk</sprite>
+    <sprite>sprites\copAtk</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\background1</background>
+    <background>background\background2</background>
+    <background>background\background3</background>
+    <background>background\background4</background>
+    <background>background\background5</background>
+    <background>background\background6</background>
+    <background>background\background7</background>
+    <background>background\background9</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\testObject</object>
     <object>objects\jHenry</object>
-    <object>objects\leftGround</object>
     <object>objects\par_terrain</object>
-    <object>objects\protoWall</object>
+    <object>objects\blockWall</object>
+    <object>objects\fatCop</object>
+    <object>objects\par_enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room2</room>
