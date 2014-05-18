@@ -1,0 +1,7 @@
+//Set player gravity
+grav = .2;
+gravity = 2;
+hsp = 0;
+vsp = 0;
+jumpspeed = 0;
+health = 3;

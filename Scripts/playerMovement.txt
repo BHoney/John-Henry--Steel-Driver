@@ -1,0 +1,29 @@
+//Movement and other stuff
+
+//Get Player Input
+    key_right = keyboard_check_direct(vk_right);
+    key_left = -keyboard_check_direct(vk_left);
+    key_jump = keyboard_check_direct(vk_space));
+    
+//Input Reaction
+    move = key_left + key_right;
+    hsp = move * movespeed;
+    if (vsp < 10) vsp += grav;
+    
+    if (place_meeting (x,y+1, par_terrain))
+    {
+        vsp = key_jump * -jumpspeed;
+    }
+    
+//Horizontal Collision
+if (place_meeting ( x+hsp, y, par_terrain))
+{
+        while(!place_meeting (x+sign(hsp), y, par_terrain))
+        {
+            x+= sign(hsp);   
+        }
+        hsp = 0;
+    }
+    
+x += hsp;
+y += vsp;
