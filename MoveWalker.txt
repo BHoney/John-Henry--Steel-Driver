@@ -1,0 +1,60 @@
+
+velocityY = velocityY+1;
+if (velocityY>TILE_SIZE-1)
+    velocityY=TILE_SIZE-1;
+    
+if (velocityX!=0)
+    dirX = velocityX/abs(velocityX);
+else
+    dirX = 0;
+    
+if (velocityY!=0)
+    dirY = velocityY/abs(velocityY);
+else
+    dirY = 0;
+
+testY = y+hbHeight/2;
+zeroX = x-hbWidth/2;
+zeroY = y-hbHeight/2;
+if (!collides || 
+    (GetCollision(zeroX+velocityX,zeroY)==0 &&
+    GetCollision(zeroX+velocityX,zeroY+16)==0 &&
+    GetCollision(zeroX+velocityX,zeroY+32)==0 &&
+    GetCollision(zeroX+velocityX,zeroY+48)==0 &&
+    GetCollision(zeroX+velocityX,zeroY+64-1)==0 &&
+    GetCollision(zeroX+hbWidth-1+velocityX,zeroY)==0 &&
+    GetCollision(zeroX+hbWidth-1+velocityX,zeroY+16)==0 &&
+    GetCollision(zeroX+hbWidth-1+velocityX,zeroY+32)==0 &&
+    GetCollision(zeroX+hbWidth-1+velocityX,zeroY+48)==0 &&
+    GetCollision(zeroX+hbWidth-1+velocityX,zeroY+64-1)==0)) {
+    x=x+velocityX;
+}
+else {
+    x=x+velocityX;
+    x = (x&$fffffff8);
+    if (dirX==-1)
+        x+=hbWidth/2;
+}
+if (!collides || 
+    (GetCollision(x+hbWidth/2-1,testY+velocityY)==0 &&
+    GetCollision(x,testY+velocityY)==0 &&
+    GetCollision(x-hbWidth/2,testY+velocityY)==0 &&
+    GetCollision(x+hbWidth/2-1,testY-hbHeight+velocityY)==0 &&
+    GetCollision(x,testY-hbHeight+velocityY)==0 &&
+    GetCollision(x-hbWidth/2,testY-hbHeight+velocityY)==0)) {
+    y=y+velocityY;
+    inAir=true;
+}
+else {
+    y=y+velocityY;
+    y = (y&$fffffff0);
+    if (dirY==-1)
+        y+=TILE_SIZE;
+    if (velocityY>0) 
+        jumping = false;
+    if (inAir) {
+        audio_play_sound_at(jump_landing,x,y+hbHeight/2,depth,100,300,1,false,1);
+    }
+    inAir = false;
+    velocityY=0;
+}

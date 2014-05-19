@@ -1,0 +1,82 @@
+if (!moveLock) {
+    if( keyboard_check(vk_left) ) 
+    {
+        velocityX=topSpeed*-1;
+        state="idle";
+    }
+    else if (keyboard_check(vk_right) )
+    {
+        velocityX=topSpeed;
+        state="idle";
+    }
+    else if (!jumping || jumping) {
+        velocityX=0;
+    }
+    
+    if (keyboard_check(vk_space) && !jumping) {
+        velocityY = -16;
+        jumping = true;
+        state="idle";
+    }
+}
+/*
+else if (moveLock && state == "dead" && keyboard_check(vk_space)) {
+    room_restart();
+    velocityX=0;
+    velocityY=0;
+}
+*/
+if (velocityX!=0 && !inAir) {
+    if (stepCounter%8==0) {
+        if (stepCounter%16==0 || stepCounter==0) {
+            audio_play_sound_at(step1,x,y,depth,100,300,1,false,1);    
+        }
+        else {
+            audio_play_sound_at(step2,x,y,depth,100,300,1,false,1);
+        }
+    }
+    stepCounter++;
+}
+else {
+    stepCounter = 0;
+}
+
+    
+if (!inAir && !jumping && velocityX==0 && velocityY==0 && !moveLock) {
+    checkDepth=true;
+    if (depthChangeAllowed &&
+        keyboard_check(vk_up) && depth==0 && 
+        GetCollision(x,y)==0 &&
+        GetCollision(x+hbWidth/2-1,y)==0 &&
+        GetCollision(x,y+hbHeight/2-1)==0 &&
+        GetCollision(x-hbWidth/2-1,y)==0 &&
+        GetCollision(x,y-hbHeight/2-1)==0) {
+        depth=2;
+        ToggleTileAlpha();
+        moveLock=true;
+        state="switching";
+        alarm[0] = 10;
+    }
+    else if (depthChangeAllowed && keyboard_check(vk_down) && depth==2) {
+        depth=0;
+        ToggleTileAlpha();
+        moveLock=true;
+        state="switching";
+        alarm[0] = 10;
+    }
+    else if (keyboard_check(ord("Z"))) {
+        moveLock=true;
+        state="attacking";
+        alarm[0] = 10;
+        instance_create(x+(hbWidth/2+16)*image_xscale,y+16,punch);
+    }
+    else if (keyboard_check(ord("X"))) {
+        moveLock=true;
+        state="playdead";
+        alarm[0] = 10;
+    }
+    checkDepth=false;
+}
+
+if (state!="dead")
+    MoveWalker();
