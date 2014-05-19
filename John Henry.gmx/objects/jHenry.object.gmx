@@ -30,7 +30,7 @@
 health = 5;
 grav = 0.3;
 moveSpeed = 3;
-
+vsp = 12;
 
 </string>
           </argument>
@@ -62,12 +62,19 @@ move_jump = keyboard_check_pressed(vk_space);
 
 //Move the player here
 move = move_left + move_right;
-jumping = false;
+inAir = false;
+grounded = false;
 
-
+if (!place_meeting(x, y+1, par_terrain))
+{
+    inAir = true;
+    move_contact_solid(270, 10);
+    //sprite_index = jJump;
+    }
 
 if (move == 0)
 {
+    hsp = 0;
     sprite_index = John;
 }
 if (move !=0)
@@ -79,26 +86,20 @@ if (move !=0)
                 if (move_left &lt; 0)
                 {
                     image_xscale = -1;
-                    x+=move_left*moveSpeed;
+                    xDir = -6;
                 }
                 if (move_right &gt; 0)
                 {
                     image_xscale = 1;
-                    x+= move_right*moveSpeed;
+                    xDir = 6;
                 }
         }
     }
 }
 
-if (move_jump != 0)
-{
-      jumping = true;
-      if (jumping == true)
-      {
-        
-      
-      }
-}    
+//Movement Goes Here
+x += xDir;
+//y = ;
 </string>
           </argument>
         </arguments>

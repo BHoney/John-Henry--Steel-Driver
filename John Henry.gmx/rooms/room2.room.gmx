@@ -51,27 +51,47 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="blockWall" x="0" y="320" name="inst_0ED2F377" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="32" y="320" name="inst_7981CD07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="64" y="320" name="inst_957BD690" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="96" y="320" name="inst_FE68E9C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="128" y="320" name="inst_EB2D3429" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="160" y="320" name="inst_DC5405FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="192" y="320" name="inst_F6816200" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="224" y="320" name="inst_7291B601" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="256" y="320" name="inst_8ED92CBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="288" y="320" name="inst_F211ED2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="320" y="320" name="inst_49E6FD96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="352" y="256" name="inst_D6C2F6A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="384" y="256" name="inst_6398BFFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="416" y="256" name="inst_23D8BCAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="320" y="256" name="inst_EBC5ABC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="608" y="384" name="inst_D78A26FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="480" y="448" name="inst_5EFFA17D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="512" y="448" name="inst_F4CD1310" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="544" y="384" name="inst_4F1BE8FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="blockWall" x="576" y="384" name="inst_211FC7A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="jHenry" x="0" y="268" name="inst_C9362EDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="0" name="inst_8EFFB1A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="32" name="inst_7029B8C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="64" name="inst_EB7F8AAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="96" name="inst_5080645B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="128" name="inst_3B3B2434" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="160" name="inst_086825DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="192" name="inst_9775B076" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="224" name="inst_504C6B78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="256" name="inst_7A792EAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="288" name="inst_0E119BA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="320" name="inst_96DA3AB9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="384" name="inst_124675EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="416" name="inst_131CF57F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="448" name="inst_A3439C47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="-32" y="352" name="inst_F7904A87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="jHenry" x="-1" y="266" name="inst_C9362EDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="0" y="320" name="inst_A9D4758B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="32" y="320" name="inst_4F46D857" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="64" y="320" name="inst_B4B69C2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="96" y="320" name="inst_5AE03645" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="128" y="320" name="inst_65A5D7B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="160" y="320" name="inst_80CBB587" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="192" y="320" name="inst_73205EAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="224" y="320" name="inst_A369486D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="256" y="320" name="inst_02FD0233" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="288" y="320" name="inst_5EF8C0EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="320" y="320" name="inst_FAB8055B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="288" y="384" name="inst_8D18AD70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="256" y="384" name="inst_0D160638" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="320" y="384" name="inst_E521C77E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="449" y="407" name="inst_6B664688" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="480" y="407" name="inst_631C39F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="512" y="407" name="inst_33BEE2CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="544" y="384" name="inst_F0556E84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="576" y="384" name="inst_ABAE3269" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="608" y="384" name="inst_EC04BE1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="352" y="256" name="inst_40EC5A29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="384" y="256" name="inst_49189E10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="416" y="256" name="inst_9C53223F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="448" y="256" name="inst_35729281" locked="0" code="" scaleX="0.96875" scaleY="0.9375" colour="4294967295" rotation="0"/>
+    <instance objName="blockFloor" x="480" y="256" name="inst_ECF5209B" locked="0" code="" scaleX="0.71875" scaleY="0.9375" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background6" x="160" y="224" w="221" h="237" xo="0" yo="0" id="10000090" name="inst_26F3F320" depth="10000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

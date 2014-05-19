@@ -25,8 +25,10 @@
     <sprite>sprites\JhenyWalk</sprite>
     <sprite>sprites\John</sprite>
     <sprite>sprites\stanBlock</sprite>
+    <sprite>sprites\wall</sprite>
     <sprite>sprites\copWalk</sprite>
     <sprite>sprites\copAtk</sprite>
+    <sprite>sprites\sprite21</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -43,7 +45,8 @@
     <object>objects\testObject</object>
     <object>objects\jHenry</object>
     <object>objects\par_terrain</object>
-    <object>objects\blockWall</object>
+    <object>objects\blockFloor</object>
+    <object>objects\wallBlock</object>
     <object>objects\fatCop</object>
     <object>objects\par_enemy</object>
   </objects>
