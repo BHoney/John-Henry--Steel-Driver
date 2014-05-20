@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string>//Create John Henry
 
-health = 5;
-grav = 0.3;
-moveSpeed = 3;
-vsp = 12;
-
+grav = 0.5;
+ySpeed = 0;
+xSpeed = 0;
+moveSpeed = 4;
+canJump = 1;
 </string>
           </argument>
         </arguments>
@@ -62,20 +62,10 @@ move_jump = keyboard_check_pressed(vk_space);
 
 //Move the player here
 move = move_left + move_right;
-inAir = false;
-grounded = false;
-
-if (!place_meeting(x, y+1, par_terrain))
-{
-    inAir = true;
-    move_contact_solid(270, 10);
-    //sprite_index = jJump;
-    }
-
 if (move == 0)
 {
-    hsp = 0;
     sprite_index = John;
+    show_debug_message("Idle");
 }
 if (move !=0)
 {
@@ -85,21 +75,47 @@ if (move !=0)
             {
                 if (move_left &lt; 0)
                 {
+                    show_debug_message("Moving left");
                     image_xscale = -1;
-                    xDir = -6;
+                    x+=move_left*moveSpeed;
                 }
                 if (move_right &gt; 0)
                 {
+                    show_debug_message("Moving Right");
                     image_xscale = 1;
-                    xDir = 6;
+                    x+= move_right*moveSpeed;
                 }
         }
     }
 }
 
-//Movement Goes Here
-x += xDir;
-//y = ;
+if place_free(x, y+1)
+{
+    gravity_direction = 270;
+    gravity = 12;
+    canJump = 0;
+}
+else
+{
+    gravity_direction = 270;
+    gravity = 0;
+    canJump = 1;
+}
+
+if !place_meeting(x, y + 1, blockFloor)
+   {
+   move_contact_solid(270, gravity);
+   }
+   
+if (move_jump)
+{
+    if (canJump == 1)
+    {
+        y-= 64;
+    }
+
+}
+ 
 </string>
           </argument>
         </arguments>
