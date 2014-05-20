@@ -9,6 +9,7 @@ move = move_left + move_right;
 if (move == 0)
 {
     sprite_index = John;
+    show_debug_message("Idle");
 }
 if (move !=0)
 {
@@ -18,12 +19,13 @@ if (move !=0)
             {
                 if (move_left < 0)
                 {
-                    
+                    show_debug_message("Moving left");
                     image_xscale = -1;
                     x+=move_left*moveSpeed;
                 }
                 if (move_right > 0)
                 {
+                    show_debug_message("Moving Right");
                     image_xscale = 1;
                     x+= move_right*moveSpeed;
                 }
@@ -31,7 +33,8 @@ if (move !=0)
     }
 }
 
-if (move_jump != 0)
-{
-      
-}    
+if !place_meeting(x, y + 1, par_terrain)
+   {
+   move_contact_solid(270, gravity);
+   }
+ 
