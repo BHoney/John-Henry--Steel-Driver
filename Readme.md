@@ -1,6 +1,10 @@
 # John Henry - Steel Driver
+![John Henry Steel Drive](http://37.media.tumblr.com/15b5d33ae6bf5e4dc21904129a202bef/tumblr_n3hmanOWUA1tpqsmeo1_1280.png)
+
 
 ## What	is "*John Henry - Steel Driver*"
+
+![Steel Driver](http://24.media.tumblr.com/886af428f6f50d3cbba97a4bd4a4046e/tumblr_n5ydlwYzmZ1tpqsmeo1_500.gif)
 
 *John Henry - Steel Driver* is a simple side scrolling beat'em up game in the vein of Streets of Rage and Final Fight being made for the itch.io hosted game jam "[#PDJam](itch.io/jam/the-public-domain-jam‎)". Beginning on May 17th and ending May 24th, PDJAM will consist of creating a game using public domain character in a week.
 
