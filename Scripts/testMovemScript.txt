@@ -1,0 +1,42 @@
+//Input
+key_right = keyboard_check(vk_right);
+key_left = keyboard_check(vk_left);
+key_jump = keyboard_check(vk_space);
+
+
+//Input Processing
+move = key_right + key_left;
+hsp = move * movespeed;
+
+if (vsp < 10)
+    {
+        vsp += grav;
+    }
+
+if (place_meeting(x, y+1, par_terrain))
+{
+    vsp = key_jump*-jumpspeed;   
+}
+
+//H-Collision
+    if(place_meeting(x+hsp, y, par_terrain))
+    {
+        while(!place_meeting(x+sign(hsp),y, par_terrain))
+        {
+            x+=sign(hsp);
+        }
+        hsp = 0;
+    }
+
+//V-Collision    
+    if(place_meeting(x, y+vsp, par_terrain))
+    {
+        while(!place_meeting(x,y+sign(vsp), par_terrain))
+        {
+            y+=sign(vsp);
+        }
+        vsp = 0;
+    }
+    
+x += hsp;
+y += vsp;

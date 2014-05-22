@@ -9,19 +9,6 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\placeholder</sprite>
-    <sprite>sprites\ground_left</sprite>
-    <sprite>sprites\ground_right</sprite>
-    <sprite>sprites\back_Tree</sprite>
-    <sprite>sprites\virginiaCreeper</sprite>
-    <sprite>sprites\barrel</sprite>
-    <sprite>sprites\bigBottle</sprite>
-    <sprite>sprites\book</sprite>
-    <sprite>sprites\lilBottle</sprite>
-    <sprite>sprites\quill</sprite>
-    <sprite>sprites\rock</sprite>
-    <sprite>sprites\table</sprite>
-    <sprite>sprites\testTube</sprite>
-    <sprite>sprites\woodpile</sprite>
     <sprite>sprites\JhenyWalk</sprite>
     <sprite>sprites\nuWalk</sprite>
     <sprite>sprites\John</sprite>
@@ -32,14 +19,55 @@
     <sprite>sprites\sprite21</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background1</background>
-    <background>background\background2</background>
-    <background>background\background3</background>
-    <background>background\background4</background>
-    <background>background\background5</background>
-    <background>background\background6</background>
-    <background>background\background7</background>
-    <background>background\background9</background>
+    <backgrounds name="backtile">
+      <background>background\backGround</background>
+      <background>background\baseGround</background>
+      <background>background\crackedGround</background>
+      <background>background\crack2</background>
+      <background>background\leftBottom</background>
+      <background>background\skyBack</background>
+      <background>background\leftTop</background>
+      <background>background\rightBottom</background>
+      <background>background\clouds</background>
+      <background>background\rightTop</background>
+      <background>background\sideLeft</background>
+      <background>background\sideRight</background>
+      <background>background\backTree</background>
+      <background>background\backBush</background>
+    </backgrounds>
+    <backgrounds name="foreground">
+      <background>background\base</background>
+      <background>background\foreBase</background>
+      <background>background\foreCrack</background>
+      <background>background\foreCrack2</background>
+      <background>background\lBottomF</background>
+      <background>background\lTopF</background>
+      <background>background\rBottomF</background>
+      <background>background\rTopF</background>
+      <background>background\sandCF</background>
+      <background>background\sandLF</background>
+      <background>background\sandR</background>
+      <background>background\sideLF</background>
+      <background>background\sRightF</background>
+    </backgrounds>
+    <backgrounds name="props">
+      <background>background\barrel</background>
+      <background>background\bBottle</background>
+      <background>background\book</background>
+      <background>background\chair</background>
+      <background>background\pen</background>
+      <background>background\rock</background>
+      <background>background\table</background>
+      <background>background\tubes</background>
+      <background>background\woodpile</background>
+      <background>background\creeper</background>
+      <background>background\bush</background>
+      <background>background\flowers</background>
+      <background>background\tree</background>
+      <background>background\yTree</background>
+      <background>background\tree2</background>
+      <background>background\tree3</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -47,13 +75,13 @@
     <object>objects\jHenry</object>
     <object>objects\par_terrain</object>
     <object>objects\blockFloor</object>
-    <object>objects\wallBlock</object>
-    <object>objects\fatCop</object>
+    <object>objects\obJSolid</object>
+    <object>objects\fatCopP</object>
     <object>objects\par_enemy</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room2</room>
     <room>rooms\testRoom</room>
-    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -3,7 +3,7 @@
   <spriteName>John</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>101</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,13 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Create John Henry
-
-grav = 0.5;
-ySpeed = 0;
-xSpeed = 0;
-moveSpeed = 4;
-canJump = 1;
+            <string>hsp = 0;
+vsp = 0;
+grav = 0.4
+moveSpeed = 6;
+jumpspeed = 5;
+health = 10;
 </string>
           </argument>
         </arguments>
@@ -56,66 +55,72 @@ canJump = 1;
             <kind>1</kind>
             <string>//Check player input
 
-move_left = - keyboard_check(vk_left);
+move_left = -keyboard_check(vk_left);
 move_right = keyboard_check(vk_right);
 move_jump = keyboard_check_pressed(vk_space);
 
 //Move the player here
 move = move_left + move_right;
+hsp = move * moveSpeed;
 if (move == 0)
 {
     sprite_index = John;
-    show_debug_message("Idle");
+   // show_debug_message("Idle");
 }
-if (move !=0)
-{
+
     if (move_left != 0) or (move_right != 0)
         {
         sprite_index = JhenyWalk;
             {
                 if (move_left &lt; 0)
                 {
-                    show_debug_message("Moving left");
+                //    show_debug_message("Moving left");
                     image_xscale = -1;
-                    x+=move_left*moveSpeed;
+                   
                 }
                 if (move_right &gt; 0)
                 {
-                    show_debug_message("Moving Right");
+                  //  show_debug_message("Moving Right");
                     image_xscale = 1;
-                    x+= move_right*moveSpeed;
                 }
         }
     }
+
+
+//Gravity and Jump
+if (vsp &lt; 10)
+{
+    vsp += grav;
 }
 
-if place_free(x, y+1)
+if (place_meeting(x, y+1, par_terrain))
 {
-    gravity_direction = 270;
-    gravity = 12;
-    canJump = 0;
-}
-else
-{
-    gravity_direction = 270;
-    gravity = 0;
-    canJump = 1;
-}
-
-if !place_meeting(x, y + 1, blockFloor)
-   {
-   move_contact_solid(270, gravity);
-   }
-   
-if (move_jump)
-{
-    if (canJump == 1)
-    {
-        y-= 64;
-    }
-
+    vsp = move_jump*(-jumpspeed);   
 }
  
+//H-Collision
+    if(place_meeting(x+hsp, y, par_terrain))
+    {
+        while(!place_meeting(x+sign(hsp),y, par_terrain))
+        {
+            x+=sign(hsp);
+        }
+        hsp = 0;
+    }
+
+//V-Collision    
+    if(place_meeting(x, y+vsp, par_terrain))
+    {
+        while(!place_meeting(x,y+sign(vsp), par_terrain))
+        {
+            y+=sign(vsp);
+        }
+        vsp = 0;
+    }
+
+//Commit movement
+    x+= hsp;
+    y+= vsp;
 </string>
           </argument>
         </arguments>
@@ -134,9 +139,9 @@ if (move_jump)
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>-28,-26</point>
-    <point>28,-26</point>
-    <point>28,26</point>
-    <point>-28,26</point>
+    <point>0,0</point>
+    <point>56,0</point>
+    <point>56,52</point>
+    <point>0,52</point>
   </PhysicsShapePoints>
 </object>

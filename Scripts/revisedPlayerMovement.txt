@@ -4,7 +4,6 @@ show_debug_message("Step");
 move_left = keyboard_check(vk_left);
 move_right = keyboard_check(vk_right);
 move_jump = keyboard_check_pressed(vk_space);
-
 //Read the Inputs
 if !place_meeting(x, y, par_terrain)
    {
@@ -12,13 +11,15 @@ if !place_meeting(x, y, par_terrain)
    show_debug_message("Falling");
    }
  
+//declare variables
+   
 
 sprite_index = John;
     if (move_left)
     {
         image_xscale = -1;
         sprite_index = JhenyWalk;
-        xSpeed = -1 ;
+        hspeed = hspeed-1;
         show_debug_message("Moving left");
     }
     
@@ -26,37 +27,36 @@ sprite_index = John;
     {
         image_xscale = 1;
         sprite_index = JhenyWalk;
-        xSpeed = 1;
+        hspeed = hspeed+1;
         show_debug_message("Moving Right");
     }
     
     else
     {
         sprite_index = John;
-        xSpeed = 0;
+        hspeed = 0;
     }
     
-    if (move_jump && ySpeed == 0)
+    if (move_jump && vspeed == 0)
     {
-        ySpeed = -5;
+        vspeed = vspeed-5;
         show_debug_message("Jumping");
     }      
     
    
-    direction = point_direction(x, y, x+xSpeed, y+ySpeed);
+    direction = point_direction(x, y, x+hspeed, y+vspeed);
     show_debug_message(direction);
-    speed = sqrt(xSpeed * xSpeed + ySpeed * ySpeed);
+    speed = sqrt(hspeed * hspeed + vspeed * vspeed);
     show_debug_message(speed);
     
-    if(ySpeed > 12)
+    if(vspeed > 12)
     {
-         ySpeed = 12;
+         vspeed = 12;
          show_debug_message("Terminal Velocity Reached");
     }
-    if (place_meeting(x, y+1, blockFloor) && ySpeed > 0)
+    if (place_meeting(x, y+1, blockFloor) && vspeed > 0)
     {
-        ySpeed = 0;
+        vspeed = 0;
         show_debug_message("grounded");
     }
 
-    ySpeed += grav;

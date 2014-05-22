@@ -1,7 +1,5 @@
-//Create John Henry
-
-health = 5;
-grav = 0.3;
-moveSpeed = 3;
-
-
+hsp = 0;
+vsp = 0;
+grav = 0.4
+moveSpeed = 6;
+jumpspeed = 7;
