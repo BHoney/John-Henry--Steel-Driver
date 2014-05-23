@@ -73,6 +73,17 @@ vsp += grav;
         dir *= -1;
         image_xscale *= -1;
     }
+    
+    if(place_meeting(x+hsp, y, turnCheck))
+    {
+        while(!place_meeting(x+sign(hsp),y, turnCheck))
+        {
+            x+=sign(hsp);
+        }
+        hsp = 0;
+        dir *= -1;
+        image_xscale *= -1;
+    }
 x+= hsp;
 
 //V-Collision    
@@ -94,25 +105,14 @@ if (place_meeting(x, y+sign(vsp), jHenry))
 {
     if(jHenry.y &lt; y-26)
     {
-       with(jHenry) vsp = -jumpspeed;
+       with(jHenry) vsp = -jumpspeed-2;
        instance_destroy();
+       audio_play_sound(deadCop,10, false);
     }
-    else
-    {
-        if (jHenry.x &gt; self.x)
-       {
-        jHenry.vsp = -7;
-        jHenry.x -= 10;
-        
-       }
-       else
-       {
-        jHenry.vsp = -7;
-        jHenry.x += 10;
-       }
-       jHenry.health -= 2;
-    }
-}
+    else{
+        audio_play_sound(damage, 10, false);
+        room_restart();
+   } } 
 </string>
           </argument>
         </arguments>

@@ -29,8 +29,8 @@
 vsp = 0;
 grav = 0.4
 moveSpeed = 6;
-jumpspeed = 5;
-health = 10;
+jumpspeed = 7;
+dead = 0;
 </string>
           </argument>
         </arguments>
@@ -68,6 +68,11 @@ if (move == 0)
    // show_debug_message("Idle");
 }
 
+if(move_jump)
+{
+    audio_play_sound(jump, 10, false);
+}
+
     if (move_left != 0) or (move_right != 0)
         {
         sprite_index = JhenyWalk;
@@ -95,7 +100,7 @@ if (vsp &lt; 10)
 
 if (place_meeting(x, y+1, par_terrain))
 {
-    vsp = move_jump*(-jumpspeed);   
+       vsp = move_jump*(-jumpspeed);   
 }
  
 //H-Collision
@@ -121,7 +126,38 @@ if (place_meeting(x, y+1, par_terrain))
 //Commit movement
     x+= hsp;
     y+= vsp;
+    
+if (place_meeting(x+sign(hsp), y, roomshift))
+    {room_goto_next()};
+
+if(y &gt; room_height)
+{   
+    audio_play_sound(fall, 10, false);
+    room_restart();
+}
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="roomshift">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

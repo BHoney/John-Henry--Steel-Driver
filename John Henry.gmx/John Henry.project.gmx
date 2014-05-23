@@ -5,7 +5,13 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0</sound>
+    <sound>sound\TitleTheme</sound>
+    <sound>sound\John_s_Theme</sound>
+    <sound>sound\Steam_Engine</sound>
+    <sound>sound\deadCop</sound>
+    <sound>sound\fall</sound>
+    <sound>sound\jump</sound>
+    <sound>sound\damage</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\placeholder</sprite>
@@ -17,6 +23,7 @@
     <sprite>sprites\copWalk</sprite>
     <sprite>sprites\copAtk</sprite>
     <sprite>sprites\sprite21</sprite>
+    <sprite>sprites\shifter</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="backtile">
@@ -68,8 +75,13 @@
       <background>background\tree2</background>
       <background>background\tree3</background>
     </backgrounds>
+    <background>background\background43</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\start</font>
+    <font>fonts\printStory</font>
+  </fonts>
   <objects name="objects">
     <object>objects\testObject</object>
     <object>objects\jHenry</object>
@@ -78,10 +90,21 @@
     <object>objects\obJSolid</object>
     <object>objects\fatCopP</object>
     <object>objects\par_enemy</object>
+    <object>objects\turnCheck</object>
+    <object>objects\roomshift</object>
+    <object>objects\pressStart</object>
+    <object>objects\ending</object>
+    <object>objects\titlle</object>
+    <object>objects\backingTrack</object>
+    <object>objects\steamTheme</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\title</room>
+    <room>rooms\room1</room>
     <room>rooms\room2</room>
-    <room>rooms\testRoom</room>
+    <room>rooms\room3</room>
+    <room>rooms\room5</room>
+    <room>rooms\room6</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
