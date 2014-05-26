@@ -24,6 +24,7 @@
     <sprite>sprites\copAtk</sprite>
     <sprite>sprites\sprite21</sprite>
     <sprite>sprites\shifter</sprite>
+    <sprite>sprites\GO</sprite>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="backtile">
@@ -97,6 +98,7 @@
     <object>objects\titlle</object>
     <object>objects\backingTrack</object>
     <object>objects\steamTheme</object>
+    <object>objects\GoArrow</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\title</room>

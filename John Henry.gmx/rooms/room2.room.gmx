@@ -293,6 +293,8 @@
     <instance objName="obJSolid" x="-32" y="1696" name="inst_295BB191" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obJSolid" x="-32" y="1664" name="inst_B31F947A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="backingTrack" x="0" y="0" name="inst_E77DA6B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="GoArrow" x="164" y="144" name="inst_44BBC3E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="GoArrow" x="676" y="1552" name="inst_D92AC6C9" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="clouds" x="-480" y="-96" w="2528" h="799" xo="0" yo="0" id="10002866" name="inst_7339FDD8" depth="100000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
