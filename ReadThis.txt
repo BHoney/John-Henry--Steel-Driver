@@ -2,3 +2,6 @@ Robert,
 
 The name of this repository is Mucho nonsimpatico con linux,
 but look i got git working.
+
+I'm shooting this your way to test if you know how to update.
+git pull this.
