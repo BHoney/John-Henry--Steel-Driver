@@ -1,0 +1,4 @@
+Robert,
+
+The name of this repository is Mucho nonsimpatico con linux,
+but look i got git working.
